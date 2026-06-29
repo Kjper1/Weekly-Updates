@@ -1,1 +1,2085 @@
-/Users/kenneattajasper/Documents/Codex/2026-06-24/files-mentioned-by-the-user-pasted/outputs/public-leadership-update-dashboard-template.html
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>GLWACH Weekly DPH Leadership Update</title>
+
+  <style>
+
+    /* ── RESET & BASE ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+
+      font-family: 'Segoe UI', Arial, sans-serif;
+
+      font-size: 13px;
+
+      background: #f0f2f5;
+
+      color: #1a1a2e;
+
+    }
+
+ 
+
+    /* ── HEADER BANNER ── */
+
+    .header {
+
+      background: linear-gradient(135deg, #1a3a5c 0%, #0d2137 100%);
+
+      color: #fff;
+
+      padding: 28px 40px 20px;
+
+      border-bottom: 4px solid #c8a84b;
+
+    }
+
+    .header h1 {
+
+      font-size: 22px;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 4px;
+
+    }
+
+    .header h2 {
+
+      font-size: 14px;
+
+      font-weight: 400;
+
+      color: #c8d8e8;
+
+      margin-bottom: 16px;
+
+      letter-spacing: 0.5px;
+
+    }
+
+    .meta-grid {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px 24px;
+
+      font-size: 12px;
+
+    }
+
+    .meta-item { display: flex; gap: 6px; }
+
+    .meta-label { color: #c8a84b; font-weight: 700; text-transform: uppercase; }
+
+    .meta-value { color: #e8f0f8; }
+
+    .classification-badge {
+
+      display: inline-block;
+
+      margin-top: 14px;
+
+      background: #c8a84b;
+
+      color: #1a1a2e;
+
+      font-weight: 700;
+
+      font-size: 11px;
+
+      padding: 3px 12px;
+
+      border-radius: 3px;
+
+      letter-spacing: 1px;
+
+    }
+
+ 
+
+    /* ── PAGE LAYOUT ── */
+
+    .page { max-width: 1200px; margin: 0 auto; padding: 28px 24px 60px; }
+
+ 
+
+    /* ── BLUF BOX ── */
+
+    .bluf-box {
+
+      background: #fff;
+
+      border-left: 6px solid #1a3a5c;
+
+      border-radius: 6px;
+
+      padding: 18px 22px;
+
+      margin-bottom: 28px;
+
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    }
+
+    .bluf-box .bluf-label {
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      color: #1a3a5c;
+
+      margin-bottom: 6px;
+
+    }
+
+    .bluf-box p { color: #333; line-height: 1.6; }
+
+ 
+
+    /* ── SECTION CARDS ── */
+
+    .section-card {
+
+      background: #fff;
+
+      border-radius: 8px;
+
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+
+      margin-bottom: 28px;
+
+      overflow: hidden;
+
+    }
+
+    .section-header {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      background: #1a3a5c;
+
+      color: #fff;
+
+      padding: 13px 22px;
+
+    }
+
+    .section-number {
+
+      background: #c8a84b;
+
+      color: #1a1a2e;
+
+      font-weight: 700;
+
+      font-size: 13px;
+
+      width: 28px; height: 28px;
+
+      border-radius: 50%;
+
+      display: flex; align-items: center; justify-content: center;
+
+      flex-shrink: 0;
+
+    }
+
+    .section-title { font-size: 14px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+
+    .section-subtitle { font-size: 12px; font-weight: 400; color: #a8c0d8; margin-top: 1px; }
+
+ 
+
+    .section-body { padding: 18px 22px; }
+
+ 
+
+    /* ── SUB-SECTION ── */
+
+    .subsection-title {
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.6px;
+
+      color: #1a3a5c;
+
+      border-bottom: 2px solid #e0e8f0;
+
+      padding-bottom: 6px;
+
+      margin: 18px 0 12px;
+
+    }
+
+    .subsection-title:first-child { margin-top: 0; }
+
+ 
+
+    /* ── TABLES ── */
+
+    .data-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+
+    .data-table thead tr { background: #e8eff8; }
+
+    .data-table th {
+
+      text-align: left;
+
+      padding: 9px 10px;
+
+      font-weight: 700;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.5px;
+
+      color: #1a3a5c;
+
+      border-bottom: 2px solid #c8d8e8;
+
+      white-space: nowrap;
+
+    }
+
+    .data-table td {
+
+      padding: 9px 10px;
+
+      border-bottom: 1px solid #eef2f7;
+
+      vertical-align: top;
+
+      line-height: 1.5;
+
+    }
+
+    .data-table tbody tr:last-child td { border-bottom: none; }
+
+    .data-table tbody tr:hover { background: #f7fafd; }
+
+    .data-table .center { text-align: center; }
+
+ 
+
+    /* ── RECURRING ROW HIGHLIGHT ── */
+
+    .row-recurring { background: #f4f0ff !important; }
+
+    .row-recurring:hover { background: #ece8ff !important; }
+
+    .recurring-badge {
+
+      display: inline-block;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.5px;
+
+      background: #7c5cbf;
+
+      color: #fff;
+
+      padding: 1px 7px;
+
+      border-radius: 10px;
+
+      margin-left: 6px;
+
+      vertical-align: middle;
+
+    }
+
+ 
+
+    /* ── LOSS ROW HIGHLIGHT ── */
+
+    .row-loss { background: #fff4f4 !important; }
+
+    .row-loss:hover { background: #ffe8e8 !important; }
+
+    .loss-badge {
+
+      display: inline-block;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.5px;
+
+      background: #c8372d;
+
+      color: #fff;
+
+      padding: 1px 7px;
+
+      border-radius: 10px;
+
+      margin-left: 6px;
+
+      vertical-align: middle;
+
+    }
+
+ 
+
+    /* ── BULLET LIST INSIDE TABLE CELL ── */
+
+    .cell-list {
+
+      margin: 4px 0 0 14px;
+
+      padding: 0;
+
+      list-style: disc;
+
+      line-height: 1.6;
+
+    }
+
+    .cell-list li { margin-bottom: 2px; }
+
+ 
+
+    /* ── STATUS BADGES ── */
+
+    .status { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; white-space: nowrap; }
+
+    .status-green  { background: #d4f0dc; color: #1a6b35; }
+
+    .status-amber  { background: #fef3d0; color: #8a5c00; }
+
+    .status-red    { background: #fde0e0; color: #8b1a1a; }
+
+    .status-purple { background: #ede8ff; color: #4b2e8a; }
+
+    .trend { font-size: 14px; }
+
+ 
+
+    /* ── LEGEND ── */
+
+    .legend {
+
+      background: #f4f7fb;
+
+      border: 1px solid #dde6f0;
+
+      border-radius: 5px;
+
+      padding: 9px 14px;
+
+      font-size: 11px;
+
+      color: #555;
+
+      margin-top: 14px;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 4px 20px;
+
+    }
+
+    .legend strong { color: #1a3a5c; }
+
+ 
+
+    /* ── ISSUES LIST ── */
+
+    .issues-list { list-style: none; }
+
+    .issues-list li {
+
+      padding: 10px 14px;
+
+      border-left: 4px solid #e8b84b;
+
+      background: #fffbf0;
+
+      border-radius: 0 5px 5px 0;
+
+      margin-bottom: 10px;
+
+      line-height: 1.5;
+
+    }
+
+    .issues-list li .issue-label { font-weight: 700; color: #1a3a5c; }
+
+    .issues-list li .ask-label { font-weight: 700; color: #c8372d; }
+
+ 
+
+    /* ── PI TABLE HIGHLIGHT ── */
+
+    .pi-header {
+
+      background: #2e5478 !important;
+
+    }
+
+    .pi-header th {
+
+      color: #fff !important;
+
+      border-bottom: 2px solid #c8a84b !important;
+
+    }
+
+    .pi-goal { font-size: 11px; color: #555; font-style: italic; }
+
+ 
+
+    /* ── CLOSING BOX ── */
+
+    .closing-box {
+
+      background: #1a3a5c;
+
+      color: #fff;
+
+      border-radius: 8px;
+
+      padding: 22px 26px;
+
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+
+    }
+
+    .closing-box .takeaway-label {
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      color: #c8a84b;
+
+      margin-bottom: 6px;
+
+    }
+
+    .closing-box p { color: #e8f0f8; line-height: 1.6; margin-bottom: 16px; }
+
+    .suspense-list { list-style: none; }
+
+    .suspense-list li {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 8px;
+
+      color: #d0e4f4;
+
+      padding: 4px 0;
+
+      font-size: 12px;
+
+    }
+
+    .suspense-list li::before {
+
+      content: '☐';
+
+      color: #c8a84b;
+
+      font-size: 14px;
+
+      line-height: 1;
+
+      flex-shrink: 0;
+
+    }
+
+    .suspense-list li.recurring-item { color: #d4c8ff; }
+
+    .suspense-list li.recurring-item::before { color: #a888ff; }
+
+    .suspense-list li.loss-item { color: #ffcccc; }
+
+    .suspense-list li.loss-item::before { color: #ff8888; }
+
+ 
+
+    .next-meeting {
+
+      margin-top: 14px;
+
+      padding-top: 12px;
+
+      border-top: 1px solid #2e5478;
+
+      font-size: 12px;
+
+      color: #a8c8e8;
+
+    }
+
+    .next-meeting strong { color: #c8a84b; }
+
+ 
+
+    /* ── FOOTER ── */
+
+    footer {
+
+      text-align: center;
+
+      font-size: 11px;
+
+      color: #888;
+
+      margin-top: 32px;
+
+      padding-top: 16px;
+
+      border-top: 1px solid #dde6f0;
+
+      line-height: 1.7;
+
+    }
+
+ 
+
+    /* ── PRINT ── */
+
+    @media print {
+
+      body { background: #fff; }
+
+      .page { padding: 10px; }
+
+      .section-card { box-shadow: none; border: 1px solid #ccc; }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+
+<!-- ═══════════════════════════════════════════════
+
+     HEADER
+
+════════════════════════════════════════════════ -->
+
+<div class="header">
+
+  <h1>GLWACH Weekly Department Leadership Update</h1>
+
+  <h2>Department of Public Health (DPH) — General Leonard Wood Army Community Hospital</h2>
+
+  <div class="meta-grid">
+
+    <div class="meta-item"><span class="meta-label">Prepared By:</span><span class="meta-value">LTC Kenneatta Jasper</span></div>
+
+    <div class="meta-item"><span class="meta-label">Week Of:</span><span class="meta-value">[DD MMM YYYY] – [DD MMM YYYY]</span></div>
+
+    <div class="meta-item"><span class="meta-label">Reporting Period:</span><span class="meta-value">Weekly</span></div>
+
+    <div class="meta-item"><span class="meta-label">Distribution:</span><span class="meta-value">Department Leadership / Section Chiefs / AOs</span></div>
+
+    <div class="meta-item"><span class="meta-label">Feeds Into:</span><span class="meta-value">Executive Monthly Meeting (next: [DD MMM YYYY])</span></div>
+
+  </div>
+
+  <div class="classification-badge">UNCLASSIFIED // FOUO</div>
+
+</div>
+
+ 
+
+<div class="page">
+
+ 
+
+  <!-- ═══ BLUF ═══ -->
+
+  <div class="bluf-box">
+
+    <div class="bluf-label">§ 0 — Purpose / BLUF (Bottom Line Up Front)</div>
+
+    <p>[e.g., Hospital Transition Day 2 work orders on track; three Commander Watch Items remain open (Army Hearing Program / Audiology underlap, medical manning shortfalls, influenza ETP). DENTAC Change of Command on 30 JUN. Three Relias training items due EOM. Multiple DHA visits and inspections scheduled JUL–AUG. FY27 Flu IPR series begins 16 JUL. Two RFIs require leadership response NLT [date]. <strong>Two pending losses: CPT Ramirez-Diaz begins outprocessing post 29 JUL; GS Audiologist last day 31 JUL</strong> — coverage plans required. No red-flag readiness risks this week.]</p>
+
+  </div>
+
+ 
+
+  <!-- ═══ SECTION 1: COMMANDER WATCH ITEMS ═══ -->
+
+  <div class="section-card">
+
+    <div class="section-header">
+
+      <div class="section-number">1</div>
+
+      <div>
+
+        <div class="section-title">Commander Watch Items</div>
+
+        <div class="section-subtitle">Strategic / high-visibility items the commander is personally tracking — carry forward until closed</div>
+
+      </div>
+
+    </div>
+
+    <div class="section-body">
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>#</th>
+
+            <th>Watch Item</th>
+
+            <th>Why It Matters / Risk</th>
+
+            <th>Owner</th>
+
+            <th class="center">Status</th>
+
+            <th class="center">Trend</th>
+
+            <th>Last Update / Next Action</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>1</td>
+
+            <td>Army Hearing Program Underlap & GLWACH Audiology Clinic Underlap</td>
+
+            <td>Continuity of Hearing Program and Audiology clinic services at risk; patient access and readiness impact if gap not closed</td>
+
+            <td>DPH / PPSL</td>
+
+            <td class="center"><span class="status status-amber">🟡 Amber</span></td>
+
+            <td class="center"><span class="trend">↑</span></td>
+
+            <td>Backfill request pushed to all MEDCOM to assess availability; TJO for GS Audiologist accepted with CHRA — monitor onboarding timeline. <strong>NOTE: GS Audiologist last day 31 JUL; CPT Ramirez-Diaz begins outprocessing post 29 JUL — dual loss increases urgency.</strong></td>
+
+          </tr>
+
+          <tr>
+
+            <td>2</td>
+
+            <td>Medical manning shortfalls vs. ops req</td>
+
+            <td>Readiness risk</td>
+
+            <td>DPH</td>
+
+            <td class="center"><span class="status status-amber">🟡 Amber</span></td>
+
+            <td class="center"><span class="trend">→</span></td>
+
+            <td>Assess against operational requirements</td>
+
+          </tr>
+
+          <tr>
+
+            <td>3</td>
+
+            <td>Influenza ETP — Army-Issued Exemption to Policy (SecWar 20 Apr 26)</td>
+
+            <td>
+
+              Influenza vaccine is now OPTIONAL for most Soldiers; however, Army-issued ETP mandates vaccination for the following populations:
+
+              <ul class="cell-list">
+
+                <li>Initial Entry Training (IET) and CTC Rotational Forces</li>
+
+                <li>Deploying and deployed personnel</li>
+
+                <li>CONUS-based Immediate Response Force (IRF) Service Members</li>
+
+                <li>Critical occupational settings: healthcare workers, first responders, confinement facilities, and Child & Youth Services (CYS)</li>
+
+              </ul>
+
+            </td>
+
+            <td>PHN</td>
+
+            <td class="center"><span class="status status-amber">🟡 Amber</span></td>
+
+            <td class="center"><span class="trend">→</span></td>
+
+            <td>ETP populations identified per SecWar policy; confirm local ETP routing process and ensure affected unit commanders are briefed on mandatory vs. optional populations</td>
+
+          </tr>
+
+          <tr>
+
+            <td>4</td>
+
+            <td><em>[Add new item]</em></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td class="center"></td>
+
+            <td class="center"></td>
+
+            <td></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <div class="legend">
+
+        <span><strong>Status:</strong></span>
+
+        <span>🟢 Green = On track</span>
+
+        <span>🟡 Amber = At risk / monitoring</span>
+
+        <span>🔴 Red = Off track / needs decision</span>
+
+        <span style="margin-left:10px"><strong>Trend:</strong></span>
+
+        <span>↑ Improving</span>
+
+        <span>→ No change</span>
+
+        <span>↓ Worsening</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+
+  <!-- ═══ SECTION 2: KEY EVENTS & ACTION ITEMS ═══ -->
+
+  <div class="section-card">
+
+    <div class="section-header">
+
+      <div class="section-number">2</div>
+
+      <div>
+
+        <div class="section-title">Key Events & Action Items</div>
+
+        <div class="section-subtitle">Look-back, look-ahead, and rolling tasker tracker</div>
+
+      </div>
+
+    </div>
+
+    <div class="section-body">
+
+ 
+
+      <!-- 2A -->
+
+      <div class="subsection-title">2A — This Week's Key Events (Look-Back)</div>
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>Date</th>
+
+            <th>Event</th>
+
+            <th>Section / POC</th>
+
+            <th>Outcome / Result</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>[DD MMM]</td>
+
+            <td>[e.g., GLWACH STX / SRP Event]</td>
+
+            <td>MRP / DPH</td>
+
+            <td>[result]</td>
+
+          </tr>
+
+          <tr>
+
+            <td>[DD MMM]</td>
+
+            <td>[e.g., Hearing Tasker Training]</td>
+
+            <td>DPH</td>
+
+            <td>[result]</td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+ 
+
+      <!-- 2B -->
+
+      <div class="subsection-title">2B — Upcoming Key Events (Look-Ahead — Next 30–90 Days)</div>
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>Date</th>
+
+            <th>Event</th>
+
+            <th>Section / POC</th>
+
+            <th>Support Required / Notes</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <!-- JUN -->
+
+          <tr>
+
+            <td><strong>30 JUN 26</strong></td>
+
+            <td><strong>DENTAC Change of Command</strong></td>
+
+            <td>DPH Leadership</td>
+
+            <td>Leadership attendance as appropriate; coordinate with DENTAC POC for any DPH support requirements</td>
+
+          </tr>
+
+          <tr>
+
+            <td><strong>30 JUN 26</strong></td>
+
+            <td><strong>Relias Training Due — Eye Wash Policy, Hot Weather Training, Deterra Drug Disposal System</strong></td>
+
+            <td>All Supervisors</td>
+
+            <td>100% completion required by EOM; supervisors verify and report delinquencies to DPH</td>
+
+          </tr>
+
+          <!-- JUL -->
+
+          <tr>
+
+            <td><strong>02 JUL 26</strong></td>
+
+            <td><strong>Elsevier Clinical Training Platform — Primary & Alternative POC Submission</strong></td>
+
+            <td>All Sections / Section Chiefs</td>
+
+            <td>Submit Primary and Alternative POC names for the Elsevier Clinical Training platform to <strong>Hospital Education</strong> NLT 02 JUL 26; section chiefs confirm submission prior to deadline</td>
+
+          </tr>
+
+          <tr>
+
+            <td><strong>01 JUL 26</strong></td>
+
+            <td>Food Handler Course</td>
+
+            <td>DPH / Environmental Health (MAJ Graham)</td>
+
+            <td>Location: <strong>Building 2222</strong></td>
+
+          </tr>
+
+          <tr>
+
+            <td><strong>14–15 JUL 26</strong></td>
+
+            <td>739 MRBC Soldier Readiness Processing (SRP)</td>
+
+            <td>SRP (A. George / SFC Azevedo) / Hearing (CPT Ramirez)</td>
+
+            <td><strong>Note:</strong> Hearing Conservation Clinic closed to walk-ins on <strong>14 JUL 26</strong> in support of this event; communicate closure to patients and units in advance</td>
+
+          </tr>
+
+          <tr>
+
+            <td><strong>16 JUL 26</strong></td>
+
+            <td>FY27 Flu Campaign — <strong>IPR #1</strong></td>
+
+            <td>PHN / DPH Leadership</td>
+
+            <td>Ensure FRAGO draft is ready; brief on mandatory ETP populations, Flu Rodeo location, and unit CDR notification plan</td>
+
+          </tr>
+
+          <tr>
+
+            <td><strong>20 JUL 26</strong></td>
+
+            <td>DHA Radiation Safety SAV</td>
+
+            <td>Health Physics / Decon (CPT Davis)</td>
+
+            <td>Ensure all radiation safety records, equipment logs, and personnel dosimetry documentation are ready for review; conduct internal pre-SAV walk-through prior to visit</td>
+
+          </tr>
+
+          <tr>
+
+            <td><strong>21 JUL 26</strong></td>
+
+            <td>DHA Immunization HCD Visit</td>
+
+            <td>DPH / PHN / MRSL</td>
+
+            <td>Prepare immunization records, clinic metrics, and program documentation; coordinate staff availability for visit; conduct internal review prior to arrival</td>
+
+          </tr>
+
+          <!-- LOSSES -->
+
+          <tr class="row-loss">
+
+            <td><strong>Post 29 JUL 26</strong></td>
+
+            <td><strong>CPT Ramirez-Diaz — Begins Outprocessing</strong> <span class="loss-badge">Loss</span></td>
+
+            <td>Hearing / DPH Leadership</td>
+
+            <td>72C loss effective post 29 JUL 26; Hearing Conservation mission coverage plan required; coordinate with DPH leadership on interim NCOIC/OIC responsibilities and backfill actions</td>
+
+          </tr>
+
+          <tr class="row-loss">
+
+            <td><strong>31 JUL 26</strong></td>
+
+            <td><strong>GS Audiologist — Last Day</strong> <span class="loss-badge">Loss</span></td>
+
+            <td>PPSL / DPH Leadership</td>
+
+            <td>Audiology clinic vacancy effective 01 AUG 26; TJO accepted with CHRA but onboarding timeline unconfirmed; MEDCOM-wide backfill request active — escalate coverage plan to leadership NLT [date]</td>
+
+          </tr>
+
+          <!-- AUG -->
+
+          <tr>
+
+            <td><strong>04 AUG 26</strong></td>
+
+            <td>CWC Treaty Annual SAV / Inspection</td>
+
+            <td>DPH / Chem Surety (J. Jackson) (OPORD 26-034)</td>
+
+            <td>All CWC treaty records, inspection documentation, and Chem Surety files must be current; coordinate with J. Jackson for pre-inspection review NLT 2 weeks prior</td>
+
+          </tr>
+
+          <tr>
+
+            <td><strong>13 AUG 26</strong></td>
+
+            <td>FY27 Flu Campaign — <strong>IPR #2</strong></td>
+
+            <td>PHN / DPH Leadership</td>
+
+            <td>Update on Flu Rodeo planning, unit CDR briefings completed, mandatory population tracking status</td>
+
+          </tr>
+
+          <!-- SEP -->
+
+          <tr>
+
+            <td><strong>17 SEP 26</strong></td>
+
+            <td>FY27 Flu Campaign — <strong>IPR #3</strong></td>
+
+            <td>PHN / DPH Leadership</td>
+
+            <td>Final pre-campaign review; confirm all logistics, staffing, and population coverage plans are finalized</td>
+
+          </tr>
+
+          <!-- SEP–OCT -->
+
+          <tr>
+
+            <td><strong>SEP–OCT 26</strong></td>
+
+            <td>EFMB Training & Testing Event</td>
+
+            <td>All Sections</td>
+
+            <td>Tasked personnel awareness; coordinate coverage plans for sections with personnel participating; monitor scheduling conflicts with mission requirements</td>
+
+          </tr>
+
+          <!-- OCT -->
+
+          <tr>
+
+            <td><strong>OCT 26</strong></td>
+
+            <td>Army Fitness Test (AFT) — October Window</td>
+
+            <td>All Military Personnel</td>
+
+            <td>Military members encouraged to sign up now; supervisors ensure scheduling does not conflict with mission requirements</td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+ 
+
+      <!-- 2B-RECURRING -->
+
+      <div class="subsection-title" style="margin-top:20px;">2B (Recurring) — Monthly Standing Events</div>
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>Recurrence</th>
+
+            <th>Event</th>
+
+            <th>Section / POC</th>
+
+            <th>Notes</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr class="row-recurring">
+
+            <td><strong>NLT 10th of Each Month</strong> <span class="recurring-badge">Monthly</span></td>
+
+            <td>Fire Extinguisher Check</td>
+
+            <td>All Section Chiefs / Facility POCs</td>
+
+            <td>Inspect all fire extinguishers in assigned spaces; document inspection tags; report any expired or missing extinguishers to Safety / Facilities immediately</td>
+
+          </tr>
+
+          <tr class="row-recurring">
+
+            <td><strong>NLT 15th of Each Month</strong> <span class="recurring-badge">Monthly</span></td>
+
+            <td>Key Verification</td>
+
+            <td>All Section Chiefs / POCs</td>
+
+            <td>Verify all keys are accounted for in key control log; report discrepancies to DPH immediately; update key control roster if personnel changes have occurred</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+ 
+
+      <!-- 2C -->
+
+      <div class="subsection-title">2C — Open Action Items / Taskers (Rolling Tracker)</div>
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>Action Item / Task</th>
+
+            <th>POC / AO</th>
+
+            <th class="center">Status</th>
+
+            <th class="center">Suspense</th>
+
+            <th>Next Step</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>Hospital Transition (CAF audits, TJC ext. survey, workstation mods, PPSL)</td>
+
+            <td>All Sections</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">JUL/AUG</td>
+
+            <td>100% CAF audits; TJC survey ~60 days</td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <strong>Relias Training — Eye Wash Station Policy</strong>
+
+              <div class="pi-goal">All personnel must complete Eye Wash Station policy module in Relias</div>
+
+            </td>
+
+            <td>All Supervisors</td>
+
+            <td class="center"><span class="status status-red">🔴 Due EOM</span></td>
+
+            <td class="center">30 JUN</td>
+
+            <td>Supervisors verify 100% completion; track and report delinquencies to DPH</td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <strong>Relias Training — Hot Weather Training</strong>
+
+              <div class="pi-goal">All personnel must complete Hot Weather Training module in Relias</div>
+
+            </td>
+
+            <td>All Supervisors</td>
+
+            <td class="center"><span class="status status-red">🔴 Due EOM</span></td>
+
+            <td class="center">30 JUN</td>
+
+            <td>Supervisors verify 100% completion; track and report delinquencies to DPH</td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <strong>Relias Training — Deterra Drug Disposal System</strong>
+
+              <div class="pi-goal">All personnel must complete Deterra Drug Disposal System module in Relias</div>
+
+            </td>
+
+            <td>All Supervisors</td>
+
+            <td class="center"><span class="status status-red">🔴 Due EOM</span></td>
+
+            <td class="center">30 JUN</td>
+
+            <td>Supervisors verify 100% completion; track and report delinquencies to DPH</td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <strong>Relias Training — JKO CPI (3 hr) & Parking Policy</strong>
+
+            </td>
+
+            <td>All Supervisors</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">17 JUN</td>
+
+            <td>Track Red/Yellow delinquencies</td>
+
+          </tr>
+
+          <!-- ELSEVIER -->
+
+          <tr>
+
+            <td>
+
+              <strong>Elsevier Clinical Training Platform — Primary & Alternative POC Designation</strong>
+
+              <div class="pi-goal">Each section must designate and submit a Primary and Alternative POC for the Elsevier Clinical Training platform to Hospital Education</div>
+
+            </td>
+
+            <td>All Section Chiefs</td>
+
+            <td class="center"><span class="status status-red">🔴 Due 02 JUL</span></td>
+
+            <td class="center">02 JUL 26</td>
+
+            <td>Submit Primary and Alternative POC names to <strong>Hospital Education</strong> NLT 02 JUL 26; section chiefs confirm submission to DPH prior to deadline</td>
+
+          </tr>
+
+          <!-- SITREP -->
+
+          <tr>
+
+            <td>
+
+              <strong>Section SITREP Submissions</strong> — All sections to submit weekly SITREPs covering:
+
+              <ul class="cell-list">
+
+                <li>Key activities conducted during the reporting period</li>
+
+                <li>Metrics (workload, readiness rates, inspection results, etc.)</li>
+
+                <li>Environmental work-ups and findings</li>
+
+                <li>Upcoming events / support requests</li>
+
+              </ul>
+
+            </td>
+
+            <td>All Section Chiefs / POCs</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">Weekly (COB Friday)</td>
+
+            <td>Submit to DCR NLT COB Friday each week; inputs feed MRC-West and MSCoE SITREPs and the Hospital Commander's decisions</td>
+
+          </tr>
+
+          <!-- WORK ORDERS -->
+
+          <tr>
+
+            <td>
+
+              <strong>Weekly Work Order Updates</strong>
+
+              <div class="pi-goal">All sections report work order status to DCR for awareness; escalate immediately if work orders impact patient care</div>
+
+            </td>
+
+            <td>All Section Chiefs / POCs</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">Weekly (COB Wednesday)</td>
+
+            <td>Submit work order updates to DCR NLT COB Wednesday each week; if a work order has the potential to impact patient care, elevate to DCR immediately — do not wait for the weekly cycle</td>
+
+          </tr>
+
+          <tr class="row-recurring">
+
+            <td>
+
+              <strong>Fire Extinguisher Check</strong> <span class="recurring-badge">Monthly</span>
+
+              <div class="pi-goal">All sections inspect and document fire extinguishers in assigned spaces</div>
+
+            </td>
+
+            <td>All Section Chiefs / Facility POCs</td>
+
+            <td class="center"><span class="status status-purple">🔵 Recurring</span></td>
+
+            <td class="center">NLT 10th Monthly</td>
+
+            <td>Document inspection tags; report expired or missing extinguishers to Safety / Facilities immediately</td>
+
+          </tr>
+
+          <tr class="row-recurring">
+
+            <td>
+
+              <strong>Key Verification</strong> <span class="recurring-badge">Monthly</span>
+
+              <div class="pi-goal">All sections verify key accountability and update key control rosters</div>
+
+            </td>
+
+            <td>All Section Chiefs / POCs</td>
+
+            <td class="center"><span class="status status-purple">🔵 Recurring</span></td>
+
+            <td class="center">NLT 15th Monthly</td>
+
+            <td>Verify all keys against key control log; report discrepancies to DPH immediately</td>
+
+          </tr>
+
+          <!-- DPMAP UPDATED -->
+
+          <tr>
+
+            <td>DPMAP (Interim PY26 Appraisal)</td>
+
+            <td>All Supervisors</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">01–30 SEP</td>
+
+            <td>PY26 Interim 1 APR–30 SEP</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Performance Awards Submission</td>
+
+            <td>All Supervisors</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">15 JUN</td>
+
+            <td>2% CIVPAY goal; CMD discretion</td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              FY27 Flu Campaign — FRAGO draft; IPR series (IPR#1: 16 JUL | IPR#2: 13 AUG | IPR#3: 17 SEP) — align with ETP mandatory populations
+
+            </td>
+
+            <td>PHN</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">IPR#1: 16 JUL</td>
+
+            <td>Identify Flu Rodeo location; update POCs; brief unit CDRs on mandatory vs. optional populations per SecWar ETP; FRAGO draft ready NLT IPR#1</td>
+
+          </tr>
+
+          <tr>
+
+            <td>DHA Radiation Safety SAV Prep</td>
+
+            <td>CPT Davis / Health Physics</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">NLT 13 JUL (pre-SAV)</td>
+
+            <td>Internal walk-through; confirm dosimetry records, equipment logs are current</td>
+
+          </tr>
+
+          <tr>
+
+            <td>DHA Immunization HCD Visit Prep</td>
+
+            <td>DPH / PHN / MRSL</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">NLT 14 JUL (pre-visit)</td>
+
+            <td>Prepare immunization records, clinic metrics, program documentation; confirm staff availability</td>
+
+          </tr>
+
+          <tr>
+
+            <td>CWC Treaty SAV Prep (OPORD 26-034)</td>
+
+            <td>J. Jackson / Chem Surety</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">NLT 21 JUL (pre-SAV)</td>
+
+            <td>All treaty records and Chem Surety files current; internal review 2 weeks prior to 04 AUG inspection</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Food Handler Course Enrollment Confirmation</td>
+
+            <td>MAJ Graham / Environmental Health</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">NLT 27 JUN</td>
+
+            <td>Confirm attendee roster prior to 01 JUL course date; location: Building 2222</td>
+
+          </tr>
+
+          <tr>
+
+            <td>739 MRBC SRP — Coordination & Walk-In Closure Notice (Hearing Cons.)</td>
+
+            <td>SFC Azevedo / CPT Ramirez</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">NLT 07 JUL</td>
+
+            <td>Communicate Hearing Conservation walk-in closure on 14 JUL to units and patients; confirm SRP support plan</td>
+
+          </tr>
+
+          <!-- PERSONNEL LOSS ACTION ITEMS -->
+
+          <tr class="row-loss">
+
+            <td>
+
+              <strong>CPT Ramirez-Diaz Outprocessing — Coverage Plan</strong> <span class="loss-badge">Loss</span>
+
+              <div class="pi-goal">72C begins outprocessing post 29 JUL 26; Hearing Conservation mission coverage must be identified and confirmed prior to departure</div>
+
+            </td>
+
+            <td>DPH Leadership / Hearing</td>
+
+            <td class="center"><span class="status status-red">🔴 Action Required</span></td>
+
+            <td class="center">NLT 22 JUL 26</td>
+
+            <td>Identify interim OIC/NCOIC for Hearing Conservation; submit backfill request if not already initiated; brief leadership on coverage plan NLT [date]</td>
+
+          </tr>
+
+          <tr class="row-loss">
+
+            <td>
+
+              <strong>GS Audiologist Departure — Coverage Plan & Onboarding Status</strong> <span class="loss-badge">Loss</span>
+
+              <div class="pi-goal">GS Audiologist last day 31 JUL 26; Audiology clinic vacancy begins 01 AUG 26; TJO accepted with CHRA but onboarding unconfirmed</div>
+
+            </td>
+
+            <td>PPSL / DPH Leadership</td>
+
+            <td class="center"><span class="status status-red">🔴 Action Required</span></td>
+
+            <td class="center">NLT 24 JUL 26</td>
+
+            <td>Confirm CHRA onboarding timeline; identify interim coverage options; escalate to MEDCOM if onboarding delayed; update leadership weekly on status</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Unit Patient Advocate Reps (Primary/Alt)</td>
+
+            <td>All Sections</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">Pending</td>
+
+            <td>Non-leadership; training to follow</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Backfill Request (72C)</td>
+
+            <td>DPH</td>
+
+            <td class="center"><span class="status status-amber">🟡 In Progress</span></td>
+
+            <td class="center">Pending</td>
+
+            <td>Awaiting MEDCOM region response</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Readiness 30/60/90 Delinquency</td>
+
+            <td>All Sections</td>
+
+            <td class="center"><span class="status status-green">🟢 On Track</span></td>
+
+            <td class="center">Continuous</td>
+
+            <td>Maintain compliance</td>
+
+          </tr>
+
+          <tr>
+
+            <td><em>[Add new tasker]</em></td>
+
+            <td></td>
+
+            <td class="center"></td>
+
+            <td class="center"></td>
+
+            <td></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <div class="legend">
+
+        <span><strong>Status:</strong></span>
+
+        <span>🟢 Complete / On track</span>
+
+        <span>🟡 In progress</span>
+
+        <span>🔴 Blocked / Overdue / Action Required</span>
+
+        <span>🔵 Recurring standing task</span>
+
+        <span style="margin-left:10px;"><strong>Row Color:</strong></span>
+
+        <span style="background:#f4f0ff;padding:1px 6px;border-radius:3px;">Purple = Monthly Recurring</span>
+
+        <span style="background:#fff4f4;padding:1px 6px;border-radius:3px;">Pink = Personnel Loss / Action Required</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+
+  <!-- ═══ SECTION 3: RFIs ═══ -->
+
+  <div class="section-card">
+
+    <div class="section-header">
+
+      <div class="section-number">3</div>
+
+      <div>
+
+        <div class="section-title">Requests for Information (RFIs)</div>
+
+        <div class="section-subtitle">Track inbound (owe others) and outbound (waiting on) — open until answered</div>
+
+      </div>
+
+    </div>
+
+    <div class="section-body">
+
+ 
+
+      <!-- 3A -->
+
+      <div class="subsection-title">3A — RFIs Requiring Leadership Action / Decision</div>
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>#</th>
+
+            <th>RFI / Question</th>
+
+            <th>Requested By</th>
+
+            <th>Owed To</th>
+
+            <th class="center">Date Opened</th>
+
+            <th class="center">Suspense</th>
+
+            <th class="center">Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>1</td>
+
+            <td>[e.g., Decision on Flu Rodeo location]</td>
+
+            <td>PHN</td>
+
+            <td>CMD</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center">NLT IPR#1 (16 JUL)</td>
+
+            <td class="center"><span class="status status-amber">🟡 Open</span></td>
+
+          </tr>
+
+          <tr>
+
+            <td>2</td>
+
+            <td>Confirm local ETP routing process for Influenza mandatory populations (IET/CTC, Deploying, IRF, Critical Occ Settings) per SecWar 20 Apr 26</td>
+
+            <td>PHN</td>
+
+            <td>CMD</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center"><span class="status status-amber">🟡 Open</span></td>
+
+          </tr>
+
+          <tr class="row-loss">
+
+            <td>3</td>
+
+            <td><strong>Hearing Conservation / Audiology interim coverage plan — post CPT Ramirez-Diaz outprocessing (post 29 JUL) and GS Audiologist departure (31 JUL)</strong> <span class="loss-badge">Loss</span></td>
+
+            <td>DPH / PPSL</td>
+
+            <td>CMD</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center">NLT 22 JUL 26</td>
+
+            <td class="center"><span class="status status-red">🔴 Urgent</span></td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td class="center"></td>
+
+            <td class="center"></td>
+
+            <td class="center"></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+ 
+
+      <!-- 3B -->
+
+      <div class="subsection-title">3B — RFIs Pending External Response</div>
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>#</th>
+
+            <th>RFI / Question</th>
+
+            <th>Submitted To</th>
+
+            <th class="center">Date Submitted</th>
+
+            <th class="center">Status</th>
+
+            <th>Notes</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>1</td>
+
+            <td>Army Hearing Program / Audiology Clinic backfill availability</td>
+
+            <td>All MEDCOM</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center"><span class="status status-amber">🟡 Pending</span></td>
+
+            <td>Broad push to all MEDCOM to source backfill; TJO for GS Audiologist accepted with CHRA — awaiting onboarding; <strong>urgency elevated: GS Audiologist last day 31 JUL, CPT Ramirez-Diaz outprocessing post 29 JUL</strong></td>
+
+          </tr>
+
+          <tr>
+
+            <td>2</td>
+
+            <td>72C backfill (31 Aug–23 Oct 26)</td>
+
+            <td>MEDCOM</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center"><span class="status status-amber">🟡 Pending</span></td>
+
+            <td>Region support</td>
+
+          </tr>
+
+          <tr>
+
+            <td>3</td>
+
+            <td>PEBLO remote case assignment (NG/RES)</td>
+
+            <td>Higher (Tasker)</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center"><span class="status status-amber">🟡 Pending</span></td>
+
+            <td>Awaiting assignment</td>
+
+          </tr>
+
+          <tr>
+
+            <td>4</td>
+
+            <td>DMIS 6166C conversion for all Specialty Clinics</td>
+
+            <td>IMD / Cerner</td>
+
+            <td class="center">[date]</td>
+
+            <td class="center"><span class="status status-amber">🟡 Pending</span></td>
+
+            <td>Ongoing engagement with IMD and Cerner</td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td class="center"></td>
+
+            <td class="center"></td>
+
+            <td></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <div class="legend">
+
+        <span><strong>Status:</strong></span>
+
+        <span>🟢 Answered / Closed</span>
+
+        <span>🟡 Open / Pending</span>
+
+        <span>🔴 Overdue / Urgent</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+
+  <!-- ═══ SECTION 4: SECTION SNAPSHOTS ═══ -->
+
+  <div class="section-card">
+
+    <div class="section-header">
+
+      <div class="section-number">4</div>
+
+      <div>
+
+        <div class="section-title">Section Snapshots (By Exception Only)</div>
+
+        <div class="section-subtitle">One line per section — report wins, risks, or changes only; blank = green/unchanged</div>
+
+      </div>
+
+    </div>
+
+    <div class="section-body">
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>Section / POC</th>
+
+            <th class="center">Status</th>
+
+            <th>Notable Item This Week</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr><td>Public Health (MAJ Graham / J. Jackson)</td><td class="center"></td><td></td></tr>
+
+          <tr><td>Industrial Hygiene (R. Armistead)</td><td class="center"></td><td></td></tr>
+
+          <tr><td>AFWC (J. Jackson / SFC Laswell)</td><td class="center"></td><td></td></tr>
+
+          <tr><td>Environmental Health (MAJ Graham)</td><td class="center"></td><td>Food Handler Course — 01 JUL 26, Building 2222; confirm attendee roster NLT 27 JUN</td></tr>
+
+          <tr class="row-loss"><td>Hearing (CPT Ramirez)</td><td class="center"><span class="status status-red">🔴 Loss</span></td><td>Walk-in closure 14 JUL in support of 739 MRBC SRP; communicate closure to units and patients NLT 07 JUL. <strong>CPT Ramirez-Diaz begins outprocessing post 29 JUL 26 — interim coverage plan required NLT 22 JUL.</strong></td></tr>
+
+          <tr><td>Chem Surety (J. Jackson)</td><td class="center"></td><td>CWC Treaty SAV 04 AUG — pre-inspection review NLT 21 JUL; CDTF shutdown 1 NOV–1 JAN (sewer repair)</td></tr>
+
+          <tr><td>Occ Med/Health (Dr. McCall / S. Visser)</td><td class="center"></td><td></td></tr>
+
+          <tr><td>PH Nursing / EPI (MAJ Graham)</td><td class="center"></td><td>Influenza ETP in effect per SecWar 20 Apr 26 — mandatory populations being tracked; local ETP routing under confirmation; FY27 Flu IPR#1: 16 JUL | IPR#2: 13 AUG | IPR#3: 17 SEP</td></tr>
+
+          <tr><td>CTMC (1LT Parker / T. Runner)</td><td class="center"></td><td>NCOIC → SFC Barrow 22 JUN; Clinic @ 89% staffing</td></tr>
+
+          <tr><td>SRP (A. George / SFC Azevedo)</td><td class="center"></td><td>739 MRBC SRP 14–15 JUL 26; coordinating support plan and walk-in closure notification</td></tr>
+
+          <tr><td>PIT (S. Keelin / SSG Martin)</td><td class="center"></td><td></td></tr>
+
+          <tr class="row-loss"><td>PPSL (CPT Frey / SFC Bostic)</td><td class="center"><span class="status status-red">🔴 Loss</span></td><td><strong>GS Audiologist last day 31 JUL 26</strong> — TJO accepted with CHRA, onboarding pending; MEDCOM-wide backfill active; space change 10 JUN; DHA Immunization HCD Visit 21 JUL — prep in progress; Elsevier POC submission due Hospital Education NLT 02 JUL</td></tr>
+
+          <tr><td>Health Physics/Decon (CPT Davis)</td><td class="center"></td><td>DHA Radiation Safety SAV 20 JUL — internal pre-SAV walk-through NLT 13 JUL; records review in progress</td></tr>
+
+          <tr><td>IDES/MEB (Mr. Storie)</td><td class="center"></td><td>MEB phase avg 59 days; DMIS 6166C conversion for all Specialty Clinics — ongoing engagement with IMD and Cerner</td></tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+ 
+
+  <!-- ═══ SECTION 5: PERSONNEL ═══ -->
+
+  <div class="section-card">
+
+    <div class="section-header">
+
+      <div class="section-number">5</div>
+
+      <div>
+
+        <div class="section-title">Personnel / Gains-Losses-Leave (Critical Only)</div>
+
+        <div class="section-subtitle">Leadership-relevant changes affecting mission or coverage</div>
+
+      </div>
+
+    </div>
+
+    <div class="section-body">
+
+      <table class="data-table">
+
+        <thead>
+
+          <tr>
+
+            <th>Name / Position</th>
+
+            <th>Change</th>
+
+            <th class="center">Effective Date</th>
+
+            <th>Coverage Plan</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>SFC Barrow</td>
+
+            <td>CTMC NCOIC (gain)</td>
+
+            <td class="center">22 JUN 26</td>
+
+            <td>Left-seat/right-seat complete</td>
+
+          </tr>
+
+          <tr class="row-loss">
+
+            <td><strong>CPT Ramirez-Diaz</strong> <span class="loss-badge">Loss</span><br/><em>72C / Hearing</em></td>
+
+            <td>Begins outprocessing — <strong>post 29 JUL 26</strong></td>
+
+            <td class="center"><strong>Post 29 JUL 26</strong></td>
+
+            <td>Interim OIC/NCOIC for Hearing Conservation must be identified NLT 22 JUL; backfill request status: <em>pending MEDCOM response</em>; leadership coverage plan approval required</td>
+
+          </tr>
+
+          <tr class="row-loss">
+
+            <td><strong>GS Audiologist (PPSL)</strong> <span class="loss-badge">Loss</span></td>
+
+            <td>Last day — <strong>31 JUL 26</strong>; Audiology clinic vacancy effective 01 AUG 26</td>
+
+            <td class="center"><strong>31 JUL 26</strong></td
